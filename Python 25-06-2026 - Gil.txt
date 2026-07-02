@@ -1,0 +1,9 @@
+github.com/dev-alexmachado
+https://github.com/dev-alexmachado/material_python/blob/main/notebooks/console
+
+comando criar ambiente virtual python
+py -m venv .venv
+
+ativacao da pasta venv
+
+.venv\Scripts\activate

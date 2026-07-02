@@ -1,0 +1,24 @@
+Python - https://www.python.org/
+- Interpretada - é aquela em que o código-fonte (escrito pelo programador) 
+é lido e executado diretamente por um programa chamado interpretador, linha por linha, 
+em tempo real
+- Alto nivel - mais perto da linguagem humana
+- Case sensitive - diferencia maiúscula e minúscula
+- Multiparadigma - estruturada , OO , O a eventos como o javascript
+- Tipagem dinâmica - não precisa especificra tipo de dados vai receber
+- Identação importa - a identação é obrigatória
+- Diversos tipos de arquitetura - 
+- Os blocos de programação não tem chaves {}
+- Não tem ";"
+- Aceita aspas simples e duplas - abriu com um tipo fecha com o mesmo
+
+Verificar se o python está instalado comando "py -V"
+
+Extenções a serem instaladas para funcionamento do vscode
+python
+jupyter
+vscode - icons
+error lens
+comment anchors
+mobile view
+sqlite

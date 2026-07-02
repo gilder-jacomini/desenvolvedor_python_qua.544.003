@@ -1,0 +1,10 @@
+retirar credenciais
+	git config --global --unset-all user.name
+	git config --global --unset-all user.email	
+
+setar credenciais
+
+	git config user.name "gilder-jacomini"
+	
+verificar se deu certo
+	git config --list
