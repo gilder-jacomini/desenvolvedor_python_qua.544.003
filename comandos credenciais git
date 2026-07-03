@@ -3,8 +3,23 @@ retirar credenciais
 	git config --global --unset-all user.email	
 
 setar credenciais
-
 	git config user.name "gilder-jacomini"
-	
+	git config user.email "gilderjacomini@gmail.com"
+
 verificar se deu certo
 	git config --list
+	
+commit do projeto
+	git add . (adicionar ao stage)
+	git commit -m "Primeiro commit aula dia 01/07/2026"
+	
+tranferir para o github
+…or push an existing repository from the command line
+git remote add origin https://github.com/gilder-jacomini/desenvolvedor_python_qua.544.003.git
+git branch -M main
+git push -u origin main
+
+atualizar todos os dias o github
+git add . (coloca os novos aqruivos no stage)
+git commit -m "mensagem do dia"
+git push 
