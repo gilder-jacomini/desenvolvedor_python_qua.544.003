@@ -4,7 +4,7 @@ import os
 os.system("cls" if os.name == "nt" else "clear")
 
 nome = input("Informe seu nome: ").strip() .title()
-idade = int(input("Informe sua idade: "))
+i = int(input("Informe sua idade: "))
 os.system("cls" if os.name == "nt" else "clear")
 
 while True:
@@ -23,28 +23,26 @@ while True:
     
     match opcao:
         case "2":
-            print("Idade abaixo da permitida para esse filme")
-            idade_min = 12
-            continue
+            i_min = 12    
         case "3":
-            print("Idade abaixo da permitida para esse filme")
-            idade_min = 14
-            continue
+            i_min = 14
         case "4":
-            print("Idade abaixo da permitida para esse filme")
-            idade_min = 16
-            continue    
+            i_min = 16  
         case "5":
-            print("Idade abaixo da permitida para esse filme")
-            idade_min = 18
-            continue
+            i_min = 18
         case "6" :
             break
         case _:
-            bilhete = "bilhete"
-            with open(f"programa_01-02/arquivos/{bilhete}.txt", "w", encoding="utf-8") as f:
-                f.write(opcao)
-                print(f"O filem escolhido foi o da sala: {opcao}, Não esqueca a pipoca!!!")
+            print("Opção Inválida")
+            continue
+        
+    if (opcao == 2 and i < i_min) or (opcao == 3 and i < i_min) or (opcao == 4 and i < i_min) or (opcao == 5 and i< i_min):
+        print("Idade não compatível com o filme, por favor escolha outra sala ou digite 6 para sair.")
+    else:
+        bilhete = "bilhete"
+        with open(f"programa_01-02/arquivos/{bilhete}.txt", "w", encoding="utf-8") as f:
+            f.write(opcao)
+            print(f"O filem escolhido foi o da sala: {opcao}, Não esqueca a pipoca!!!")
          
 
     
