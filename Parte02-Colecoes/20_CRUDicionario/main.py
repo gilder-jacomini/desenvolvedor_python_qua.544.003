@@ -35,21 +35,32 @@ while True:
                 print(f"{'-'*40}")
             continue
         case "3":
-            
-            while True:
-                valor = input("Informa o nome do usuário: ")
-                if valor in usuario:
-                    chave = input("Informa o campo a ser alterado: ").strip().lower()
-                    if chave in usuario:
-                        usuario[chave] = input(F"Informe o novo valor para {chave}: ").strip()
-                    else:
-                        print("Chave não encontrada")
-                    
-            # TODO fazer a parte de alterar o usuáro
-            pass
+            # Alteração do usuário, busca pelo nome.
+            nome = input("Informa o nome do usuário que deseja alterar: ").strip().title()
+            for usuario in usuarios:
+                if nome in usuario['nome']:
+                    # menu de escolha de qual chave alterar
+                    print("nome")
+                    print("cpf")
+                    print("email")
+                    print("Cancelar")
+                    alterar = input("Informa o campo a ser alterado: ").strip().lower()
+                    if alterar in usuario:    
+                        usuario[alterar] = input(f"Informe o novo valor: ").strip()
+                        print("A chave foi alterada com sucesso")
+                else:
+                    print("Usuário não encontrado")
+            continue
+                      
         case "4":
-            # TODO Excluir usuário
-            pass
+            nome = input("Informa o nome do usuário que deseja deletar: ").strip().title()
+            for usuario in usuarios:
+                if nome in usuario['nome']:
+                    usuarios.remove(usuario)
+                    print("Usuário deletado com sucesso")
+                else:
+                    print("Usuário não encontrado")
+            continue
         case "5":
             break
         case _:
