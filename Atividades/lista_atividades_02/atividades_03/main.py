@@ -5,16 +5,15 @@ import json
 import os
 os.system("cls" if os.name == "nt" else "clear")
 
-#situacao = ""
 
 # Criando a lista
 alunos = []
-# Criado a inserção de alunos
+# laco de repetição para criar a inserção de alunos e notas/situação no json
 while True:
     print("1- Gravar novo aluno/notas")
     print("2- Listar alunos/médias")
     print("3- Sair")
-    opcao = input("Informe a opçaõ desejada: ")
+    opcao = input("Informe a opçaõ desejada: ").strip()
     
     os.system("cls" if os.name == "nt" else "clear")
     
@@ -30,7 +29,7 @@ while True:
             n02 = float(input ("Informe a 2ª nota: ").replace(",","."))
             n03 = float(input ("Informe a 3ª nota: ").replace(",","."))
             
-            #insere no dicionário aluno as notas
+            #insere no dicionário "aluno" as notas
             aluno['n01'] = n01
             aluno['n02'] = n02
             aluno['n03'] = n03
@@ -39,7 +38,7 @@ while True:
             media = (n01 + n02 + n03) / 3
             
             #adiciona a media no dicionario arredondando para o inteiro com 2 casas decimais
-            aluno["media"] = round(media, 2)
+            aluno['media'] = round(media, 2)
             
             #adiciona a situação no dic, verificar se aprovado ou não
             aluno['situacao'] = "Aprovado" if media >= 7  else "Reprovado"
@@ -50,17 +49,19 @@ while True:
             # Grava os dados no arquivo .json
             with open(f"atividades_03/atividade.json" , "w" , encoding="utf-8") as f:
                 json.dump(alunos, f)
+            continue
             
         case "2":
-            # Lista o alunos bem como sua media e se está aprovado/reprovado
-            # if not alunos:
-            #     print("Não há aluno cadastrado")
-            # else:
-            with open(f"atividades_03/atividade.json" , "r" , encoding="utf-8") as f:
-                alunos = json.load(f)
-            for aluno in alunos:
-                for chave , valor in aluno.items():
-                    print(f"{chave.capitalize()}: {valor}")
+            #Lista o alunos bem como sua media e se está aprovado/reprovado
+            if not alunos:
+                print("Não há nenhum aluno cadastrado")
+            else:
+                with open(f"atividades_03/atividade.json" , "r" , encoding="utf-8") as f:
+                    alunos = json.load(f)
+                for aluno in alunos:
+                    for chave , valor in aluno.items():
+                        print(f"{chave.capitalize()}: {valor}")
+                print("-----")
             continue
         
         case "3":

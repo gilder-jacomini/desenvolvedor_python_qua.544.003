@@ -20,6 +20,19 @@ git branch -M main
 git push -u origin main
 
 atualizar todos os dias o github
+
 git add . (coloca os novos aqruivos no stage)
 git commit -m "mensagem do dia"
 git push 
+
+atualizar no inicio da aula
+git pull na pasta desenvolvedor
+
+criar ambiente virtual venv nas pastas
+py -m venv .venv
+
+ativar ambiente venv
+.venv\Scripts\activate
+
+verificar se a venv está ativar
+a linha de comando no cmd cpomeca com "(.venv)"

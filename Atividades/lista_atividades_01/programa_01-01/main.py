@@ -30,5 +30,3 @@ try:
 
 except Exception as e:
     print("Algo deu errado verifique o código")        
-
-

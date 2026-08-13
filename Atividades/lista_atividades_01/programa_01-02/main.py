@@ -53,4 +53,7 @@ while True:
             print(f"O filem escolhido foi o da sala: {opcao}, Não esqueca a pipoca!!!")
             print("\n")
 
+            break
+            # encerra o loop
+
     
