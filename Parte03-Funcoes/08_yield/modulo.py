@@ -1,0 +1,25 @@
+import math
+import os
+
+def limpar():
+    os.system("cls" if os.name == "nt" else "clear")
+
+def equacao_segundo_grau(a,b,c):
+    # delta = b² - 4*a*c
+    # baskara = -b +/- raiz de delta sobre 2*a
+    if a != 0:
+        delta = (b**2) - 4*a*c
+        if delta > 0:
+            x1 = (-b+math.sqrt(delta))/(2*a)
+            x2 = (-b-math.sqrt(delta))/(2*a)
+            yield x1
+            yield x2
+        elif delta == 0:
+            x = -b/(2*a)
+            yield x
+        else:
+            yield "Não existem raízes reias"
+            
+    else:
+        yield "A equação não é do  2° grau"
+
