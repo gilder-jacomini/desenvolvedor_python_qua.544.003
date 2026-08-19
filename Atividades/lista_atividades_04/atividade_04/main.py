@@ -25,21 +25,22 @@ def main():
                 base = int(input("Informe o valor da base: "))
                 expoente = int(input("Informe o valor do expoente: "))
                 print(f"O valor da potência é: {potencia(base,expoente)}")
-
+                continue
             case "3":
                n = int(input("Informe o numero a ser calculado a raiz: "))
                print(f"O valor da raiz é: {raiz(n)}")
-
+               continue
             case "4":
                a = int(input("Informe o valor da altura: "))
                l = int(input("Informe o valor da Largura: "))
                c = int(input("Informe o valor do comprimento: "))
                print(f"O valor do volume do paralelepipedo é: {paralelepipedo(a,l,c)}")
-
+               continue
             case "5":
-               r = float(input("Informe o valor do raio: "))
-               print(f"O valor volume do cilindro é: {cilindrico(r)}")
-
+               r = int(input("Informe o valor do raio: "))
+               h = int(input("Informe o valor da altura: "))
+               print(f"O valor volume do cilindro é: {cilindrico(r,h)}")
+               continue
             case "6":
                break
            

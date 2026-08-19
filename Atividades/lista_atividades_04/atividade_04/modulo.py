@@ -21,8 +21,8 @@ def raiz(n):
 def paralelepipedo(a,b,c):
     return  a*b*c
     
-def cilindrico(r):
-    return math.pi*r**2
+def cilindrico(r, h):
+    return math.pi*r**2*h
 
 
 
