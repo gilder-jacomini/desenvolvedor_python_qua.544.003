@@ -25,7 +25,7 @@ class Conta(IConta):
         self.__saldo = saldo
 
     @property
-    def titular(self):
+    def titular(self):  
         return self.__titular
 
     @titular.setter
