@@ -12,3 +12,6 @@ class Pessoa:
 
     def __float__(self):
         return self.altura
+
+    def __del__(self):
+        print(f"Objeto: {self} - foi deletado da memória 🗑️")

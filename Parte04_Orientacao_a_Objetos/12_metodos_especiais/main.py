@@ -19,5 +19,7 @@ def main():
     print(len(usuario))
     print(float(usuario))
 
+    del(usuario)  # Deletando o objeto da memória
+
 if __name__ == "__main__":
     main()
