@@ -5,14 +5,11 @@ def hoje():
     return date.today().strftime("%d/%m/%Y")
 
 def main():
-    auto.PAUSE = 0.75
+    auto.PAUSE = 1
     auto.press('win')
-    auto.write('vs code')    
+    auto.write('cmd')    
     auto.press('enter')
-    auto.sleep(10)
-    auto.hotkey('ctrl', 'j')
-    auto.sleep(10)
-    auto.write('cd C:\Users\ALUNO\Gilder\desenvolvedor_python_qua.544.003')
+    auto.write("cd C:/Users/ALUNO/Gilder/desenvolvedor_python_qua.544.003")
     auto.press('enter')
     auto.write('git add .')
     auto.press('enter')
