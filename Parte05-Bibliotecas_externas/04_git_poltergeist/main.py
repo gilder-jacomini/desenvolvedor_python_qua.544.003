@@ -17,6 +17,7 @@ def main():
     auto.press('enter')
     auto.write('git push')
     auto.press('enter')
+    auto.write('exit')
                
 if __name__ == "__main__":
     main()
