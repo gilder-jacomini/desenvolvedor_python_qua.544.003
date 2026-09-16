@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'ghost';
+    src: url(../fonts/ghost.otf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+    font-family: ghost, Arial, Helvetica, sans-serif;
+
+}
