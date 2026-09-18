@@ -1,13 +1,21 @@
 from flask import Flask, request, render_template
 import pyautogui as auto
 from datetime import date
+import webview
+import os
+import sys
 
-app = Flask(__name__)
+
+if getattr(sys, 'frozzen', False):
+    template_folder = os.path.join(sys._MEIPASS, 'templates')
+    static_folder = os.path.join(sys._MEIPASS, 'static')
+    app = Flask(__name__, template_folder=template_folder, static_folder=static_folder)
+else:
+    app = Flask(__name__)
 
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 @app.route('/commitar', methods = ['POST'])
 def comitar():
@@ -31,12 +39,17 @@ def comitar():
         auto.write("git push")
         auto.press("enter")
         auto.sleep(3)
-        #auto.write("exit")
-        #auto.press("enter")
-
+        auto.write("exit")
+        auto.press("enter")
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    #app.run(debug=True)
+    window = webview.create_window(
+        title="PolterGit",
+        url=app,
+        width= 1000,
+        height=700
+    )
 
-    
+    webview.start()
